@@ -1,8 +1,9 @@
 import { Inter_400Regular, Inter_700Bold, useFonts } from '@expo-google-fonts/inter';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useState } from 'react';
-import { Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import LoanCard from './components/loanCard';
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -28,7 +29,7 @@ export default function Index() {
           <Text style={styles.greetingText2}>Welcome to WLoan</Text>
         </View>
         <TouchableOpacity onPress={() => { }} style={styles.notificationBtn}>
-          <Ionicons name="notifications-outline" size={30} color="black" />
+          <Ionicons name="notifications-outline" size={30} color="white" />
         </TouchableOpacity>
       </View>
 
@@ -37,20 +38,24 @@ export default function Index() {
         <View style={styles.rowContainer}>
           <View style={{ flex: 1 }}>
             <Text style={styles.smallText}>Your Balance</Text>
-            <Text style={styles.largeText}>{isBalanceHidden ? "****" : "$3,200.00"}</Text>
+            <TouchableOpacity onPress={() => toggleBalanceVisibility()}>
+              <Text style={styles.largeText}>{isBalanceHidden ? "****" : "$3,200.00"}</Text>
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity onPress={() => toggleBalanceVisibility()} style={styles.hideBtn}>
-            {isBalanceHidden ? (
-              <Ionicons name="eye-outline" size={26} color="black" />
-            ) : (
-              <Ionicons name="eye-off-outline" size={26} color="black" />
-            )}
-          </TouchableOpacity>
+          <Pressable style={styles.defaultBtn} onPress={() => { }}>
+            <Ionicons name="add" size={24} color="white" />
+          </Pressable>
         </View>
-        <Pressable style={styles.defaultBtn} onPress={() => { }}>
-          <Text style={styles.defaultBtnText}>Add Funds</Text>
-        </Pressable>
       </View>
+
+      {/* Loan Card Component */}
+      <ScrollView>
+        <View style={styles.loanCardContainer}>
+          <LoanCard title='Monthly Loan' givenAmount={5000} collectedAmount={3000} />
+          <LoanCard title='Daily Loan' givenAmount={5000} collectedAmount={3000} />
+          <LoanCard title='Collateral Cheque' givenAmount={5000} collectedAmount={3000} />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -59,17 +64,17 @@ const styles = StyleSheet.create({
   container: {
     padding: 16,
     flex: 1,
-    // backgroundColor: "white",
+    backgroundColor: "#1E1C1A",
   },
   greetingText: {
-    fontSize: 20,
-    fontFamily: 'Inter_700Bold',
-    color: "#333",
+    fontSize: 22,
+    fontFamily: 'GolosText-SemiBold',
+    color: "white",
   },
   greetingText2: {
     fontSize: 20,
     fontFamily: 'Inter_400Regular',
-    color: "#333",
+    color: "white",
   },
   rowContainer: {
     flexDirection: "row",
@@ -83,10 +88,11 @@ const styles = StyleSheet.create({
     borderColor: "gray"
   },
   yourBalanceComponent: {
-    padding: 20,
+    padding: 16,
     borderRadius: 16,
     backgroundColor: "white",
     marginTop: 24,
+    marginBottom: 16,
   },
   smallText: {
     fontSize: 16,
@@ -104,13 +110,10 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 30,
   },
-  defaultBtnText: {
-    color: "white",
-    textAlign: "center",
-    fontSize: 18,
-    fontFamily: 'Inter_700Bold',
-  },
   hideBtn: {
     marginTop: 15,
+  },
+  loanCardContainer: {
+    gap: 16,
   }
 })
