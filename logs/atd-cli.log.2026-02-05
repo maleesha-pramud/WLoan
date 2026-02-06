@@ -1,0 +1,30 @@
+{"timestamp":"2026-02-05T23:25:01.082784Z","level":"INFO","fields":{"message":"Fetching timetable for 2026-02-06..."},"target":"atd_lib::core::schedule"}
+{"timestamp":"2026-02-05T23:25:01.083002Z","level":"INFO","fields":{"message":"Student ID: 76131"},"target":"atd_lib::core::schedule"}
+{"timestamp":"2026-02-05T23:25:02.220903Z","level":"INFO","fields":{"message":"Found 2 meeting(s) for 2026-02-06"},"target":"atd_lib::core::schedule"}
+{"timestamp":"2026-02-05T23:25:08.922488Z","level":"INFO","fields":{"message":"Fetching timetable for 2026-02-06..."},"target":"atd_lib::core::schedule"}
+{"timestamp":"2026-02-05T23:25:08.922662Z","level":"INFO","fields":{"message":"Student ID: 76131"},"target":"atd_lib::core::schedule"}
+{"timestamp":"2026-02-05T23:25:14.940339Z","level":"INFO","fields":{"message":"Found 2 meeting(s) for 2026-02-06"},"target":"atd_lib::core::schedule"}
+{"timestamp":"2026-02-05T23:25:14.940552Z","level":"INFO","fields":{"message":"📋 Processing 2 meeting(s)..."},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:14.940658Z","level":"INFO","fields":{"message":"════════════════════════════════════════════════════════════"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:14.940730Z","level":"INFO","fields":{"message":"\n📍 Meeting 1/2"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:14.940805Z","level":"INFO","fields":{"message":"─────────────────────────────────────────────────────────────"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:14.940881Z","level":"INFO","fields":{"message":"Processing: WCD ll - Revision Class"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:14.940936Z","level":"INFO","fields":{"message":"Time: 09:00 AM - 02:00 PM"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:14.940994Z","level":"INFO","fields":{"message":"Lecturer: Mr Sanjaya Suraweera"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:14.941058Z","level":"INFO","fields":{"message":"Link: "},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:14.941113Z","level":"INFO","fields":{"message":"Fetching registration page: "},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:14.941177Z","level":"ERROR","fields":{"message":"Failed to extract registration data: HTTP request failed: builder error: relative URL without a base"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:15.448859Z","level":"INFO","fields":{"message":"\n📍 Meeting 2/2"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:15.448961Z","level":"INFO","fields":{"message":"─────────────────────────────────────────────────────────────"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:15.449058Z","level":"INFO","fields":{"message":"Processing: HDP I  - Day 8"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:15.449208Z","level":"INFO","fields":{"message":"Time: 07:00 PM - 12:00 AM"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:15.449269Z","level":"INFO","fields":{"message":"Lecturer: Mr Anjana Samarakoon"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:15.449610Z","level":"INFO","fields":{"message":"Link: https://javainstitute-edu-lk.zoom.us/meeting/register/XMF1VX3TStmNAN0ENXlYUw"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:15.449669Z","level":"INFO","fields":{"message":"Fetching registration page: https://javainstitute-edu-lk.zoom.us/meeting/register/XMF1VX3TStmNAN0ENXlYUw"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:16.666686Z","level":"INFO","fields":{"message":"Extracted UUID: tZ0pcOyvqjkpHdxHtnojXj7x12WdHElN2__H"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:17.682684Z","level":"INFO","fields":{"message":"Registering for meeting (UUID: tZ0pcOyvqjkpHdxHtnojXj7x12WdHElN2__H)..."},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:18.199632Z","level":"INFO","fields":{"message":"✓ Registration successful!"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:18.199872Z","level":"INFO","fields":{"message":"Action URL: https://javainstitute-edu-lk.zoom.us/rest/meeting/registrant/tZ0pcOyvqjkpHdxHtnojXj7x12WdHElN2__H/info?tk=8YhTjFF8LRpcZuBuzFp97W3MlyjTH7Pnhomq3XzflqfMQFoeqYJPJEM.KzqTo-hTke3qzidm&ac=approved&timezone_id=Asia/Colombo"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:18.199943Z","level":"INFO","fields":{"message":"\n════════════════════════════════════════════════════════════"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:18.199976Z","level":"INFO","fields":{"message":"✅ Registration process completed!"},"target":"atd_lib::core::registration"}
+{"timestamp":"2026-02-05T23:25:18.200037Z","level":"INFO","fields":{"message":"📊 Summary: 2 total, 1 registered, 0 skipped, 1 failed"},"target":"atd_lib::core::registration"}
